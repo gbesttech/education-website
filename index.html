@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Education Website</title>
+    <title>Home Page (Responsive Education Website)</title>
 
     <!------FONT-AWESOME ICON CDN LINk------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
@@ -22,7 +22,13 @@
   rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+        <style>
+            body {
+                background-image: url("images/bg-texture.png");
+            }
+        </style>
 
 </head>
 <body>
@@ -36,7 +42,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <button id="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
-            <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></i></button>
+            <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </nav>
     <!--=============END OF NAVBAR===========-->
@@ -463,8 +469,27 @@
 <!--=============END OF FOOTER ============-->
 
 
-
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
+
+    
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            // whhen window width is > 600px
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                }
+            }
+        });
+        </script>
 </body>
 </html>
